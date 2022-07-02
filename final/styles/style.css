@@ -665,6 +665,18 @@ ul {
     padding: 10px;
   }
 
+  .card100 span {
+    display: none;
+  }
+
+  .card100 h2 span, .card100 .img {
+    display: block;
+  }
+
+  .card100:hover span {
+    display: block;
+  }
+
   .card101 {
     height: 100px;
     min-width: 300px;
