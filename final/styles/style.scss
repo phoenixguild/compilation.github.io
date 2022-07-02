@@ -206,13 +206,31 @@ body {
       display:none;
     }
     .containment1{
-      display:block;
+      display:flex;
     }
     .card100 p img,.card101 p{
       height:50px;
       width:50px;
     }
-
+    .card101{
+      height: 100px;
+      min-width: 200px;
+      margin-left: 100px;
+      animation: slide 30s linear infinite;
+      border:1px solid red;
+    }
+    @keyframes slide {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-1000px, 0, 0);
+      }
+    }
+    .card101:hover{
+      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
+      background-color: #4bb8ff;
+     }
   .content {
     width: 80%;
     padding: 0;
@@ -325,6 +343,9 @@ body {
     display:flex;
 
   }
+  ul{
+    list-style: none;
+  }
   .list2,.list3,.list4,.list6{
     list-style: none;
     white-space: nowrap;
@@ -336,7 +357,7 @@ body {
   .list5{
     display:grid;
     margin:auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     width:60%;
 
   }
@@ -598,21 +619,7 @@ body {
       opacity: 1;
      }
   
-     .card101,.card100{
-      width: 130px;
-      height: 270px;
-      background: #f0f0f0;
-      border-radius: 10px;
-      text-align: center;
-      transition: all 0.5s;
-    }
-     .card,.card1,.card2,.card3,.card4,.card5,.card6,.card100,.card8,.card9,.card101,.card100{
-    width: 130px;
-    height: 270px;
-    background: #f0f0f0;
-    border-radius: 10px;
-    text-align: center;
-    transition: all 0.5s;
+  
   }
   .card101 .img {
     display: flex;
@@ -666,10 +673,15 @@ body {
     background:black;
     width:100%;
     height: 50vh;
+    margin: 0;
+    padding:0;
    }
    .list1{
+    width:100%;
     display: grid;
-    border:1px solid red;
+    margin:0;
+    padding:0;
+    border:1px;
     grid-template-columns: 1fr;
    }
    .list2,.list3,.list4,.list6{
@@ -678,10 +690,17 @@ body {
     display: flex;
     flex-direction: column;
     gap:15px;
-    border:1px solid red;
+    border:1px;
+  }
+  .list2 li{
+    text-align: center;
+    
   }
   .list5{
     display:grid;
+    margin:0;
+    padding:0;
+    width:100%;
+    border:1px;
     grid-template-columns: 1fr 1fr;
    }
-  }

@@ -276,12 +276,50 @@ img:hover {
 }
 
 .containment1 {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .card100 p img, .card101 p {
   height: 50px;
   width: 50px;
+}
+
+.card101 {
+  height: 100px;
+  min-width: 200px;
+  margin-left: 100px;
+  -webkit-animation: slide 30s linear infinite;
+          animation: slide 30s linear infinite;
+  border: 1px solid red;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-1000px, 0, 0);
+            transform: translate3d(-1000px, 0, 0);
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-1000px, 0, 0);
+            transform: translate3d(-1000px, 0, 0);
+  }
+}
+.card101:hover {
+  -webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
+          box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
+  background-color: #4bb8ff;
 }
 
 .content {
@@ -397,6 +435,10 @@ footer a:hover {
   display: flex;
 }
 
+ul {
+  list-style: none;
+}
+
 .list2, .list3, .list4, .list6 {
   list-style: none;
   white-space: nowrap;
@@ -414,7 +456,7 @@ footer a:hover {
 .list5 {
   display: grid;
   margin: auto;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 60%;
 }
 
@@ -601,119 +643,111 @@ footer a:hover {
   .card101:hover > p, .card100:hover > p {
     opacity: 1;
   }
+}
+.card101 .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px auto 10px auto;
+  width: 70px;
+  height: 70px;
+  background: url(IMAGES/profile9.png);
+  background-size: cover;
+  border-radius: 50%;
+  font-size: 11px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
 
-  .card101, .card100 {
-    width: 130px;
-    height: 270px;
-    background: #f0f0f0;
-    border-radius: 10px;
-    text-align: center;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-  }
+.card101:hover .img {
+  width: 100%;
+  height: 60%;
+  border-radius: 10px 0 0;
+  margin: 0 auto;
+  background: url(IMAGES/profile9.png);
+  background-size: cover;
+  background-position: center;
+  z-index: 99999;
+}
 
-  .card, .card1, .card2, .card3, .card4, .card5, .card6, .card100, .card8, .card9, .card101, .card100 {
-    width: 130px;
-    height: 270px;
-    background: #f0f0f0;
-    border-radius: 10px;
-    text-align: center;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-  }
+.card100 .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px auto 10px auto;
+  width: 70px;
+  height: 70px;
+  background: url(IMAGES/nft-image.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  font-size: 11px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
 
-  .card101 .img {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 30px auto 10px auto;
-    width: 70px;
-    height: 70px;
-    background: url(IMAGES/profile9.png);
-    background-size: cover;
-    border-radius: 50%;
-    font-size: 11px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-  }
+.card100:hover .img {
+  width: 100%;
+  height: 60%;
+  border-radius: 10px 0 0;
+  margin: 0 auto;
+  background: url(IMAGES/nft-image.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 99999;
+}
 
-  .card101:hover .img {
-    width: 100%;
-    height: 60%;
-    border-radius: 10px 0 0;
-    margin: 0 auto;
-    background: url(IMAGES/profile9.png);
-    background-size: cover;
-    background-position: center;
-    z-index: 99999;
-  }
+footer {
+  background: black;
+  width: 100%;
+  height: 50vh;
+  margin: 0;
+  padding: 0;
+}
 
-  .card100 .img {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 30px auto 10px auto;
-    width: 70px;
-    height: 70px;
-    background: url(IMAGES/nft-image.jpg);
-    background-size: cover;
-    border-radius: 50%;
-    font-size: 11px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-  }
+.list1 {
+  width: 100%;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  border: 1px;
+  grid-template-columns: 1fr;
+}
 
-  .card100:hover .img {
-    width: 100%;
-    height: 60%;
-    border-radius: 10px 0 0;
-    margin: 0 auto;
-    background: url(IMAGES/nft-image.jpg);
-    background-size: cover;
-    background-position: center;
-    z-index: 99999;
-  }
+.list2, .list3, .list4, .list6 {
+  list-style: none;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  border: 1px;
+}
 
-  footer {
-    background: black;
-    width: 100%;
-    height: 50vh;
-  }
+.list2 li {
+  text-align: center;
+}
 
-  .list1 {
-    display: grid;
-    border: 1px solid red;
-    grid-template-columns: 1fr;
-  }
-
-  .list2, .list3, .list4, .list6 {
-    list-style: none;
-    white-space: nowrap;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 15px;
-    border: 1px solid red;
-  }
-
-  .list5 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+.list5 {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border: 1px;
+  grid-template-columns: 1fr 1fr;
 }/*# sourceMappingURL=style.css.map */
