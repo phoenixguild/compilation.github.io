@@ -1,3 +1,8 @@
+* {
+  font-family: Merriweather;
+  font-weight: lighter;
+}
+
 body {
   background: steelblue;
   overflow-x: hidden;
