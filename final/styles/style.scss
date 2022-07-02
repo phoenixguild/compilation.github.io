@@ -221,7 +221,7 @@ body {
       min-width: 200px;
       margin-left: 100px;
       animation: slide 30s linear infinite;
-      border:1px solid red;
+      border:1px solid ;
     }
     @keyframes slide {
       0% {
@@ -570,7 +570,7 @@ body {
         width: 100%;
         margin: 0 auto;
         margin-top: 100px;
-        border: 1px solid red;
+        border: 1px;
       }
 
     .containment1{
