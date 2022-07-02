@@ -358,7 +358,7 @@ body {
     display:grid;
     margin:auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    width:60%;
+    width:100%;
 
   }
   .list3 li:nth-child(2),.list4 li:nth-child(2), .list5 li:nth-child(2){
@@ -572,7 +572,7 @@ body {
     }
     
     .card101,.card100{
-      height: 100%;
+      height: 100px;
       min-width: 300px;
       margin-left: 100px;
       animation: slide 30s linear infinite;
@@ -620,7 +620,7 @@ body {
      }
   
   
-  }
+  
   .card101 .img {
     display: flex;
     margin: 30px auto 10px auto;
@@ -704,3 +704,4 @@ body {
     border:1px;
     grid-template-columns: 1fr 1fr;
    }
+  }
