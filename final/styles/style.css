@@ -564,7 +564,7 @@ ul {
   }
 
   .containment {
-    overflow: hidden;
+    overflow-x: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
