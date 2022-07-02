@@ -1,6 +1,6 @@
 body {
   background:steelblue;
-    // background: url(Images/nature.jpg);
+    // background: url(../Images/nature.jpg);
     overflow-x: hidden;
     font-weight: 900;
   }
@@ -71,7 +71,7 @@ body {
     margin: 2rem;
     border: 1px;
     width: 50px;
-    background:url(Images/logo.png);
+    background:url(../Images/logo.png);
     background-size: 100%;
     aspect-ratio: 1/1;
   }
@@ -86,7 +86,6 @@ body {
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
     background-color: #4bb8ff;
     }
-    
     .blob {
     height: 10px;
     width: 75%;
@@ -203,8 +202,16 @@ body {
         transform: rotateY(360deg);
       }
     }
-    
-
+    .containment{
+      display:none;
+    }
+    .containment1{
+      display:block;
+    }
+    .card100 p img,.card101 p{
+      height:50px;
+      width:50px;
+    }
 
   .content {
     width: 80%;
@@ -232,141 +239,6 @@ body {
       text-align: center;
     }
   }
-  .slide-container{
-    width:100%;
-    width:70vh;
-    display:flex;
-    align-items: center;
-    overflow: hidden;
-    margin: 80px;
-    background: linear-gradient(to right, rgb(255,65,108),rgb(255,75,43));
-}
-.image-slider{
-    width:100%;
-    height:300px; 
-    position: absolute;
-    left:0;
-    margin:100px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    transition:.7s;
-
-
-}
-.slides-div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 100px 30px 100px 30px;
-}
-.img{
-    position:relative;
-    width:200px;
-    height:100px;
-    transition: .5s;
-    filter: blur(2px); 
-}
-.button{
-    position: absolute;
-    width:200px;
-    height:100px;
-    transition: .5s;
-    background:rgba(0,0,0,.4);
-}
-.button:hover{
-    background-color: rgba(0,0,0,.7);
-}
-#slider-span0:target ~ .image-slider #img0,
-#slider-span0:target ~ .image-slider #button-0{
-    width:200px;
-    height:100px;
-    background-color: transparent;
-    filter: blur(0px);
-}
-#slider-span1:target ~ .image-slider #img1,
-#slider-span1:target ~ .image-slider #button-1{
-  width:200px;
-  height:100px;
-  background-color: transparent;
-  filter: blur(0px);
-}
-#slider-span2:target ~ .image-slider #img2,
-#slider-span2:target ~ .image-slider #button-2{
-  width:200px;
-  height:100px;
-  background-color: transparent;
-  filter: blur(0px);
-}
-#slider-span3:target ~ .image-slider #img3,
-#slider-span3:target ~ .image-slider #button-3{
-  width:200px;
-  height:100px;
-  background-color: transparent;
-  filter: blur(0px);
-}
-#slider-span4:target ~ .image-slider #img4,
-#slider-span4:target ~ .image-slider #button-4{
-  width:200px;
-  height:100px;
-  background-color: transparent;
-  filter: blur(0px);
-}
-#slider-span5:target ~ .image-slider #img5,
-#slider-span5:target ~ .image-slider #button-5{
-  width:200px;
-  height:100px;
-  background-color: transparent;
-  filter: blur(0px);
-}
-#slider-span6:target ~ .image-slider #img6,
-#slider-span6:target ~ .image-slider #button-6{
-  width:200px;
-  height:100px;
-  background-color: transparent;
-  filter: blur(0px);
-}
-#slider-span7:target ~ .image-slider #img7,
-#slider-span7:target ~ .image-slider #button-7{
-  width:200px;
-  height:100px;
-  background-color: transparent;
-  filter: blur(0px);
-}
-#slider-span8:target ~ .image-slider #img8,
-#slider-span8:target ~ .image-slider #button-8{
-  width:200px;
-  height:100px;
-  background-color: transparent;
-  filter: blur(0px);
-}
-#slider-span9:target ~ .image-slider #img9,
-#slider-span9:target ~ .image-slider #button-9{
-  width:200px;
-  height:100px;
-  background-color: transparent;
-  filter: blur(0px);
-}
-#slider-span10:target ~ .image-slider #img10,
-#slider-span10:target ~ .image-slider #button-10{
-  width:200px;
-  height:100px;
-  background-color: transparent;
-  filter: blur(0px);
-}
-
-#slider-span0:target ~ .image-slider{left:90%}
-#slider-span1:target ~ .image-slider{left:70%}
-#slider-span2:target ~ .image-slider{left:50%}
-#slider-span3:target ~ .image-slider{left:30%}
-#slider-span4:target ~ .image-slider{left:10%}
-#slider-span6:target ~ .image-slider{left:-10%}
-#slider-span7:target ~ .image-slider{left:-30%}
-#slider-span8:target ~ .image-slider{left:-50%}
-#slider-span9:target ~ .image-slider{left:-70%}
-#slider-span10:target ~ .image-slider{left:-90%}
-
-  
   /*Question*/
   .question {
     position: relative;
@@ -434,8 +306,9 @@ body {
     
   }
   footer{
+    font-size: 20px;
     position: relative;
-    width:100%;
+    width:97vw;
     background:black;
     color:white;
     max-height: 50vh;
@@ -450,24 +323,25 @@ body {
   }
   .list1{
     display:flex;
-    list-style: none;
-    justify-content: space-around;
+
   }
-  .list2,.list3,.list4,.list5{
+  .list2,.list3,.list4,.list6{
     list-style: none;
+    white-space: nowrap;
     display: flex;
     flex-direction: column;
     gap:15px;
     padding:40px;
   }
+  .list5{
+    display:grid;
+    margin:auto;
+    grid-template-columns: 1fr 1fr;
+    width:60%;
+
+  }
   .list3 li:nth-child(2),.list4 li:nth-child(2), .list5 li:nth-child(2){
     padding-top:20px;
-  }
-  .list2{
-    position: absolute;
-    left:5px;
-    bottom:0;
-    top:0;
   }
 
   .disabled{
@@ -487,6 +361,113 @@ body {
  } 
   
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  @media (max-width: 35em) {
     .primary-navigation {
       position: fixed;
@@ -531,7 +512,7 @@ body {
     .mobile-nav-toggle{
       display: block;
       position: absolute;
-      background: url(Images/openbar.svg);
+      background: url(../Images/openbar.svg);
       background-repeat: no-repeat;
       background-size: 100%;
       border: 0;
@@ -545,12 +526,162 @@ body {
     }
   
     .mobile-nav-toggle[aria-expanded=true] {
-      background: url(Images/closebar.svg);
+      background: url(../Images/closebar.svg);
       background-size: 100%;
     }
-    .list1{
-      width:95vw;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
+    .container1{
+      display:none;
+      margin:200px;
+      width: 210px;
+      height: 140px;
+      position: relative;
+      
+      border:1px;
     }
-}
+    .containment{
+      display:flex;
+    }
+    .containment1{
+      display:flex;
+    }
+    .card101:hover p img,.card100:hover p img{
+      height:60%;
+      width:10%;
+      padding: 5px;
+    }
+    
+    .card101,.card100{
+      height: 100%;
+      min-width: 300px;
+      margin-left: 100px;
+      animation: slide 30s linear infinite;
+    }
+    @keyframes slide {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-1000px, 0, 0);
+      }
+    }
+    .card101:hover,.card100:hover{
+      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
+      background-color: #4bb8ff;
+     }
+     
+     card101:hover .blob,.card100:hover .blob{
+      height: 0;
+     }
+     .card101 h2,.card100 h2 {
+      padding: 15px 10px;
+      font-size: 25px;
+      transition: all 0.1s;
+      z-index: -99;
+      line-height: 17px;
+     }
+     
+     .card101 span,.card100 span{
+      font-size: 18px;
+     }
+     
+     .card101:hover h2,.card100:hover h2 {
+      opacity: 0;
+      width: 100%;
+      position: absolute;
+      transition: all 0.5s;
+     }
+     
+     .card101>p,.card100>p {
+      opacity: 0;
+     } 
+     .card101:hover>p,.card100:hover>p{
+      opacity: 1;
+     }
+  
+     .card101,.card100{
+      width: 130px;
+      height: 270px;
+      background: #f0f0f0;
+      border-radius: 10px;
+      text-align: center;
+      transition: all 0.5s;
+    }
+     .card,.card1,.card2,.card3,.card4,.card5,.card6,.card100,.card8,.card9,.card101,.card100{
+    width: 130px;
+    height: 270px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  .card101 .img {
+    display: flex;
+    margin: 30px auto 10px auto;
+    width: 70px;
+    height: 70px;
+    background:url(IMAGES/profile9.png);
+    background-size: cover;
+    border-radius: 50%;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+   }
+   
+   .card101:hover .img {
+    width: 100%;
+    height: 60%;
+    border-radius: 10px 0 0;
+    margin: 0 auto;
+    background:url(IMAGES/profile9.png);
+    background-size: cover;
+    background-position: center;
+    z-index: 99999;
+   }
+   .card100 .img {
+    display: flex;
+    margin: 30px auto 10px auto;
+    width: 70px;
+    height: 70px;
+    background:url(IMAGES/nft-image.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+   }
+   
+   .card100:hover .img {
+    width: 100%;
+    height: 60%;
+    border-radius: 10px 0 0;
+    margin: 0 auto;
+    background:url(IMAGES/nft-image.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 99999;
+   }
+   footer{
+    background:black;
+    width:100%;
+    height: 50vh;
+   }
+   .list1{
+    display: grid;
+    border:1px solid red;
+    grid-template-columns: 1fr;
+   }
+   .list2,.list3,.list4,.list6{
+    list-style: none;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    border:1px solid red;
+  }
+  .list5{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+   }
+  }
